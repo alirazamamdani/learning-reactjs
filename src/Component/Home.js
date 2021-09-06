@@ -2,12 +2,7 @@ import { useState , useEffect} from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
-    const [blog, setBlogs] = useState([
-          {title : 'My new website', body : 'lorem ipsum....', author : 'mario', id: 1},
-          {title : 'Welcome React', body : 'lorem ipsum....', author : 'Mamdani', id: 2},
-          {title : 'Welcome Javascript', body : 'lorem ipsum....', author : 'mario', id: 3},
-          {title : 'Welcome Javascript', body : 'lorem ipsum....', author : 'mario', id: 4},
-    ])
+    const [blog, setBlogs] = useState(null)
 
 
 
@@ -16,13 +11,20 @@ const Home = () => {
         setBlogs(newBlogs);
     }
     useEffect(()=> {
-        console.log("use Effect running")
+       fetch("http://localhost:8000/blogs")
+       .then(response => {
+           return response.json();
+       })
+       .then(data => {
+        console.log(data)
+        setBlogs(data)
+       })
        
     }, [])
 
     return ( 
         <div className="home">
-            <BlogList blog={blog} title="All Blogs" handleDeleteBlog={handleDeleteBlog} />
+           {blog && <BlogList blog={blog} title="All Blogs" handleDeleteBlog={handleDeleteBlog} />}
             {/* <BlogList blog={blog.filter((blog)=> blog.author === "mario" )} title="Mamdani"/> */}
            
         </div>
