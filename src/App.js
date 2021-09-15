@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route , Switch} from 'react-router-dom'
 import CreateForm from './Component/CreateForm'
 import BlogsDetails from './Component/BlogDetails';
 import NotFound  from './Component/Notfound';
-
+import Signup from './Component/Signup';
 
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
       <div className="content">
        <Switch>
          <Route exact path="/">
+          <Signup />
+         </Route>
+         <Route  path="/home">
           <Home />
          </Route>
          <Route path="/create" >
