@@ -29,12 +29,11 @@ jobs:
         with:
           verison: 14
      
-      - name : Install Npm Install
-        uses: actions/setup-node@v2
+      - name : Github Actions for Yarn
+        uses: Borales/actions-yarn@v2.1.0
         with:
-          node-version: 14
-             run:install
-    
+          cmd : install
+      
       - name : run json server
         run : npx json/server --watch data/db.json --port 8000    
      
