@@ -28,7 +28,10 @@ jobs:
         uses: actions/setup-node@v2.4.0
         with:
           verison: 14
-     
+       
+      - name: clean cache
+        run: npm cache clean --force
+
       - name : Github Actions for Yarn
         uses: Borales/actions-yarn@v2.1.0
         with:
