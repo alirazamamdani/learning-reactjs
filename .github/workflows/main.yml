@@ -34,6 +34,9 @@ jobs:
         with:
           cmd : install
       
+      - name: start json-server
+        run:  npm json-server --watch data/db.json --port 8000    
+      
       - name : creating build
         run : npm build
            
