@@ -1,14 +1,20 @@
 const Signup = () => {
   return (
-    <div>
-      <form>
-        <label>Email:</label>
-        <input type="text" />
-        <br></br>
-        <label>Passowrd:</label>
-        <input type="password" />
-        <br></br>
-        <button>Sign Up</button>
+    <div className="create">
+      <h2>Sign Up </h2>
+          <form>
+        <label>Email Address</label>
+        <input
+          type="text"
+        />
+         <label>Password</label>
+        <input
+          type="text"
+         
+        />
+      
+      
+        <button className="singup-btn">SignUp</button>
       </form>
     </div>
   );
