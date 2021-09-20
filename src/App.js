@@ -13,11 +13,12 @@ function App() {
        <Navbar />
       <div className="content">
        <Switch>
-         <Route path="/signup">
-          <Signup />
-         </Route>
+        
          <Route exact path="/">
           <Home />
+         </Route>
+         <Route path="/signup">
+          <Signup />
          </Route>
          <Route path="/create" >
           <CreateForm />
