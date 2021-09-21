@@ -1,7 +1,7 @@
 const Signup = () => {
   return (
     <div className="create">
-      <h2>Sign Up </h2>
+      <h2 style={{textAlign: "center", fontSize: "30px"}}>Sign Up </h2>
           <form>
         <label>Email Address</label>
         <input
