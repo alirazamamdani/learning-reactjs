@@ -9,11 +9,11 @@ const BlogsDetails = () => {
     data: blog,
     error,
     isPending,
-  } = useFetch('http://localhost:8000/blogs/' + id);
+  } = useFetch('https://blogapplicationreact-default-rtdb.firebaseio.com/' + id);
   const history = useHistory();
  
   const handleClick = () => {
-    fetch("http://localhost:8000/blogs/" + blog.id , {
+    fetch("https://blogapplicationreact-default-rtdb.firebaseio.com/" + blog.id , {
       method : "DELETE"
     }).then(()=> {
       history.push("/");
