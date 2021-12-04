@@ -12,8 +12,7 @@ const useFetch = (url) => {
         .then((response) => {
           if (!response.ok) {
             throw Error("could not fetch the data for that resource");
-          }else 
-          return response.json();
+          } else return response.json();
         })
         .then((data) => {
           setData(data);

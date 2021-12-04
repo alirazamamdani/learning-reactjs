@@ -11,7 +11,7 @@ const Form = () => {
         e.preventDefault();
 
         const blog = {title , body , author};
-        fetch("https://blogapplicationreact-default-rtdb.firebaseio.com/", {
+        fetch("http://localhost:3000/blogs", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body : JSON.stringify(blog),

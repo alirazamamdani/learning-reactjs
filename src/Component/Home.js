@@ -6,7 +6,7 @@ const Home = () => {
     data: blogs,
     error,
     isLoading,
-  } = useFetch("https://blogapplicationreact-default-rtdb.firebaseio.com/");
+  } = useFetch("http://localhost:3000/blogs");
   return (
     <div className="home">
       {error && <div>{error}</div>}
